@@ -14,7 +14,7 @@ const BlogDetails = () => {
     const navigate = useNavigate();
 
     const deleteHandler = () => {
-        fetch("https://blog-server2.herokuapp.com/blogs" + blog.id, {
+        fetch("https://blog-server2.herokuapp.com/blogs/" + blog.id, {
             method: "DELETE",
         }).then(() => {
             navigate("/");
