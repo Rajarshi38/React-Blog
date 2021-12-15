@@ -143,3 +143,16 @@ textarea {
     border: none;
     cursor: pointer;
 }
+
+.not-found {
+    text-align: center;
+}
+
+.not-found a {
+    display: block;
+    margin-top: 18px;
+    color: #f1356d;
+}
+.not-found h2 {
+    color: #f1356d;
+}

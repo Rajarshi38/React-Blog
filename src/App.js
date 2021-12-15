@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Create from "./components/Create";
 import BlogDetails from "./components/BlogDetails";
 import UpdateBlog from "./components/UpdateBlog";
+import NotFound from "./components/NotFound";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
 
                         <Route path="/blog/:id" element={<BlogDetails />} />
                         <Route path="/blog/:id/update" element={<UpdateBlog />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>
             </div>
