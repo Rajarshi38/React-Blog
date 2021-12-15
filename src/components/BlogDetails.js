@@ -7,14 +7,14 @@ const BlogDetails = () => {
     const { id } = useParams();
     const {
         data: blog,
-        
+
         isPending,
         error,
-    } = useFetch("http://localhost:8000/blogs/" + id);
+    } = useFetch("https://blog-server2.herokuapp.com/blogs/" + id);
     const navigate = useNavigate();
 
     const deleteHandler = () => {
-        fetch("http://localhost:8000/blogs/" + blog.id, {
+        fetch("https://blog-server2.herokuapp.com/blogs" + blog.id, {
             method: "DELETE",
         }).then(() => {
             navigate("/");

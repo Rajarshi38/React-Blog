@@ -19,7 +19,7 @@ const UpdateBlog = () => {
     //     error,
     // } = useFetch(`http://localhost:8000/blogs/${id}`);
     useEffect(() => {
-        const url = `http://localhost:8000/blogs/${id}`;
+        const url = `https://blog-server2.herokuapp.com/blogs/${id}`;
 
         const fetchData = async () => {
             try {
@@ -47,7 +47,7 @@ const UpdateBlog = () => {
         const blog = { title, body, userId: author };
         setIsPendingHere(true);
 
-        fetch("http://localhost:8000/blogs/" + id, {
+        fetch("https://blog-server2.herokuapp.com/blogs/" + id, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog),
